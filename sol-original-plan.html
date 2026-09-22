@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3 INCHES TALL — Sol's Original Roblox Game Plan</title>
+  <style>
+    :root{
+      --bg:#0b0f14;--panel:#121821;--panel2:#17202b;--text:#edf2f7;--muted:#9fb0c2;
+      --accent:#7dd3fc;--accent2:#a78bfa;--good:#86efac;--warn:#facc15;--danger:#fb7185;
+      --line:#263241;--code:#0a0e13;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;background:linear-gradient(180deg,#091018 0%,#0b0f14 100%);
+      color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.65;
+    }
+    .wrap{max-width:1120px;margin:0 auto;padding:32px 20px 72px}
+    .hero{
+      background:radial-gradient(circle at top right,rgba(125,211,252,.14),transparent 35%),
+                 radial-gradient(circle at top left,rgba(167,139,250,.14),transparent 30%),
+                 var(--panel);
+      border:1px solid var(--line);border-radius:24px;padding:34px;margin-bottom:28px;
+      box-shadow:0 24px 80px rgba(0,0,0,.25);
+    }
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
+    h1{font-size:clamp(2.2rem,6vw,4.8rem);line-height:.95;margin:.25em 0 .2em}
+    h2{font-size:2rem;margin:2.2em 0 .55em;padding-top:.5em;border-top:1px solid var(--line)}
+    h3{font-size:1.35rem;margin:1.6em 0 .35em;color:#f8fafc}
+    h4{font-size:1.05rem;margin:1.2em 0 .25em;color:var(--accent)}
+    p{margin:.8em 0}
+    .lede{font-size:1.15rem;color:#d8e2ec;max-width:900px}
+    .tagline{
+      margin-top:18px;padding:16px 18px;border-left:4px solid var(--accent);
+      background:#0f1721;border-radius:12px;font-weight:700;
+    }
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;margin:18px 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    table{width:100%;border-collapse:collapse;margin:18px 0;background:var(--panel);border:1px solid var(--line)}
+    th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+    th{background:var(--panel2);color:#fff}
+    tr:last-child td{border-bottom:0}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    pre{white-space:pre-wrap;background:var(--code);border:1px solid var(--line);padding:18px;border-radius:14px;overflow:auto}
+    .good{color:var(--good)} .warn{color:var(--warn)} .danger{color:var(--danger)}
+    .quote{
+      background:#0f1721;border-left:4px solid var(--accent2);padding:15px 18px;border-radius:10px;
+      color:#dfe7f1;font-style:italic;
+    }
+    .small{color:var(--muted);font-size:.94rem}
+    ul,ol{padding-left:1.25rem}
+    li{margin:.32em 0}
+    .toc a{color:var(--accent);text-decoration:none}
+    .toc a:hover{text-decoration:underline}
+    .pill{display:inline-block;padding:5px 9px;border:1px solid var(--line);border-radius:999px;margin:3px 4px 3px 0;color:#cbd5e1;background:#0f1721;font-size:.88rem}
+    .verdict{
+      background:linear-gradient(135deg,rgba(125,211,252,.12),rgba(167,139,250,.12));
+      border:1px solid #3a4b61;border-radius:20px;padding:24px;
+    }
+    a{color:var(--accent)}
+    @media(max-width:680px){.hero{padding:24px}.wrap{padding:18px 12px 56px}th,td{padding:9px 10px;font-size:.92rem}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Sol's original Roblox game plan</div>
+    <h1>3 INCHES TALL</h1>
+    <p class="lede"><strong>A co-op open-world backyard survival/adventure game.</strong></p>
+    <p class="lede">You wake up three inches tall in a gigantic suburban backyard. Build a vehicle out of junk, explore enormous everyday environments with friends, survive spiders, sprinklers, lawnmowers, dogs, storms and other backyard disasters, recover valuable salvage, and bring it back to your tiny settlement.</p>
+    <div class="tagline">Grounded-size fantasy + Dead Rails-style expeditions + open-world driving + Brookhaven-style self-expression + collectible discovery + dynamic disaster events.</div>
+    <p class="small">Original plan written September 2026. This page preserves the original concept and structure in a cleaner HTML format.</p>
+  </header>
+
+  <section class="card toc">
+    <h3>Contents</h3>
+    <div class="grid">
+      <div>
+        <a href="#market">Roblox market reality</a><br>
+        <a href="#ideas">15 concepts pressure-tested</a><br>
+        <a href="#game">The actual game</a><br>
+        <a href="#map">World map</a><br>
+        <a href="#events">Dynamic events</a>
+      </div>
+      <div>
+        <a href="#progression">Progression</a><br>
+        <a href="#social">Social systems</a><br>
+        <a href="#monetization">Monetization</a><br>
+        <a href="#playerbase">Player-base ceiling</a><br>
+        <a href="#discovery">Discovery strategy</a>
+      </div>
+      <div>
+        <a href="#tech">Technology architecture</a><br>
+        <a href="#production">Production scope</a><br>
+        <a href="#debate">Self-debate / red team</a><br>
+        <a href="#roadmap">Roadmap</a><br>
+        <a href="#verdict">Final verdict</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="market">
+    <h2>Part I — What Roblox actually looks like in 2026</h2>
+    <p>The important lesson from the 2025 viral wave is that <strong>peak CCU is not the same thing as a durable business</strong>. Roblox's own direction has increasingly favored experiences with stronger long-term retention rather than pure short-term monetization.</p>
+    <p>The target therefore cannot simply be “go viral.” It needs:</p>
+    <div>
+      <span class="pill">player-generated situations</span>
+      <span class="pill">identity / collection</span>
+      <span class="pill">expandable progression</span>
+      <span class="pill">cheap-to-produce updates</span>
+      <span class="pill">co-play</span>
+      <span class="pill">strong first-session comprehension</span>
+    </div>
+
+    <h3>What discovery cares about</h3>
+    <table>
+      <tr><th>Signal</th><th>Why it matters</th></tr>
+      <tr><td>Play-through rate</td><td>Does the thumbnail/title actually make people enter?</td></tr>
+      <tr><td>&lt;60 sec bounce</td><td>Did they immediately decide the game was not for them?</td></tr>
+      <tr><td>61–180 sec bounce</td><td>Did onboarding kill them?</td></tr>
+      <tr><td>D1 / D2–7 / D8–28 play days</td><td>Does the game become a habit?</td></tr>
+      <tr><td>Playtime per user</td><td>Is the game actually engaging?</td></tr>
+      <tr><td>Intentional co-play</td><td>Are people deliberately returning with friends?</td></tr>
+      <tr><td>Qualified sessions</td><td>Are sessions substantive rather than accidental clicks?</td></tr>
+      <tr><td>Spend days / Robux per user</td><td>Does the economy create repeat value without sabotaging retention?</td></tr>
+    </table>
+
+    <div class="quote">We are not optimizing for “How can we get 30,000 players on launch day?” We are optimizing for “How do we make the first 300 players come back so reliably that Roblox gives us 3,000, then 30,000?”</div>
+
+    <h3>The spike-vs-durability lesson</h3>
+    <p>Games can hit enormous peaks and then settle dramatically lower. The more useful long-term comparison is not “who had the biggest weekend?” but “who still matters years later?” Brookhaven and Blox Fruits are more strategically instructive than a one-week phenomenon because they created worlds people keep inhabiting.</p>
+    <p>The durable stack is:</p>
+    <div class="tagline">Hook → Fun → Progression → Identity</div>
+    <p>Hook without depth creates a viral collapse. Depth without a hook gets ignored. Progression without fun becomes a treadmill. Fun without identity often gets completed and abandoned.</p>
+  </section>
+
+  <section id="ideas">
+    <h2>Part II — Fifteen concepts through the meat grinder</h2>
+    <p>I scored ideas for immediate hook, retention potential, social/viral potential, monetization without ruining the game, evergreen potential, LiveOps efficiency, and implementation safety.</p>
+    <table>
+      <tr><th>#</th><th>Concept</th><th>Score</th><th>Why it matters</th></tr>
+      <tr><td>1</td><td><strong>3 Inches Tall</strong></td><td><strong>8.70</strong></td><td>Huge visual hook + exploration + co-op + vehicles + expandable world</td></tr>
+      <tr><td>2</td><td>Shopkeeper Street</td><td>8.75</td><td>Incredible social economy, but gigantic exploit/economy risk</td></tr>
+      <tr><td>3</td><td>Heist Architect</td><td>8.65</td><td>Player-built heists could be endless; technically brutal</td></tr>
+      <tr><td>4</td><td>Tiny Kingdoms</td><td>8.65</td><td>Creation + defense + visiting = amazing; enormous scope</td></tr>
+      <tr><td>5</td><td>Creature Field Guide</td><td>8.50</td><td>Extremely updateable collection game</td></tr>
+      <tr><td>6</td><td>Museum Hunters</td><td>8.40</td><td>Expeditions + personal museum gives great meta progression</td></tr>
+      <tr><td>7</td><td>Junkyard Kings</td><td>8.35</td><td>Restore/flip/customize cars; highly monetizable and durable</td></tr>
+      <tr><td>8</td><td>Stormline</td><td>8.25</td><td>Storm chasing + rescue has insane clip potential</td></tr>
+      <tr><td>9</td><td>Island Rescue</td><td>8.25</td><td>Dynamic disasters + cooperative roles</td></tr>
+      <tr><td>10</td><td>Arcade Sports Club</td><td>8.20</td><td>Competitive and underserved, but matchmaking risk</td></tr>
+      <tr><td>11</td><td>Courier Chaos</td><td>8.10</td><td>Excellent viral physics, weaker long-term motivation</td></tr>
+      <tr><td>12</td><td>Deep Salvage</td><td>8.05</td><td>Underwater mystery/extraction; harder mobile controls</td></tr>
+      <tr><td>13</td><td>City Services</td><td>8.05</td><td>Long-lived RP/jobs potential; enormous production scope</td></tr>
+      <tr><td>14</td><td>Expedition 13</td><td>8.00</td><td>Excellent roguelite depth; expensive balancing/content</td></tr>
+      <tr><td>15</td><td>Night Shift</td><td>7.85</td><td>Excellent video hook; horror novelty can burn out</td></tr>
+    </table>
+
+    <h3>Why 3 Inches Tall still won</h3>
+    <p>Shopkeeper Street actually produced the largest raw score, but I would not greenlight it first because its catastrophic failure modes include player-to-player economies, inflation, duping, marketplace exploits, moderation, AFK economies and economy design. One exploit can annihilate months of balancing.</p>
+    <p><strong>3 Inches Tall</strong> had the best combination of ceiling and survivable execution risk.</p>
+
+    <div class="grid">
+      <div class="card"><h4>Shopkeeper Street</h4><p>Every player owns a store inside a living market district. Huge social upside; huge economy/exploit burden.</p></div>
+      <div class="card"><h4>Heist Architect</h4><p>Players build secure vaults and raid other player-designed layouts. Brilliant UGC loop, but hard backend/geometry/security problems.</p></div>
+      <div class="card"><h4>Tiny Kingdoms</h4><p>Build miniature kingdoms, visit, defend, cooperate. Fantastic identity but dangerously broad scope.</p></div>
+      <div class="card"><h4>Creature Field Guide</h4><p>Track, photograph, document and collect wildlife. Cheap updates, but must avoid becoming Pet Simulator with a nature skin.</p></div>
+      <div class="card"><h4>Museum Hunters</h4><p>Go on expeditions, recover artifacts, build a museum. Strong action-to-identity loop; slightly weaker immediate hook.</p></div>
+      <div class="card"><h4>Junkyard Kings</h4><p>Find wrecked cars, repair, customize, collect or flip them. One of the safest alternatives if vehicle modeling is a strength.</p></div>
+      <div class="card"><h4>Stormline</h4><p>Co-op storm chasing and rescue. Extremely shareable; weather and mobile performance are scary.</p></div>
+      <div class="card"><h4>Island Rescue</h4><p>Fires, floods, landslides, storms, boats, ATVs, helicopters. Great emergent gameplay but scope can explode.</p></div>
+      <div class="card"><h4>Arcade Sports Club</h4><p>One polished weird sport plus seasonal modes. Competitive retention, but needs great netcode and matchmaking.</p></div>
+      <div class="card"><h4>Courier Chaos</h4><p>Ridiculous packages, physics disasters, tiny vehicles. Great YouTube game, weaker D30 unless the depot/vehicle meta gets deeper.</p></div>
+      <div class="card"><h4>Deep Salvage</h4><p>Explore shipwrecks and submerged ruins. Good mystery/extraction fantasy; underwater controls are a mobile risk.</p></div>
+      <div class="card"><h4>City Services</h4><p>Tow trucks, electricians, firefighters, road crews and EMS in a persistent city. Could live forever, but massive production scope.</p></div>
+      <div class="card"><h4>Expedition 13</h4><p>Co-op roguelite archaeological expeditions with permanent base progression. Strong depth, weaker “one picture explains it” hook.</p></div>
+      <div class="card"><h4>Night Shift</h4><p>Run a gas station while increasingly weird things happen. Great first-video concept; surprise burns out.</p></div>
+    </div>
+  </section>
+
+  <section id="game">
+    <h2>Part III — The actual game</h2>
+    <h3>Core fantasy</h3>
+    <p>Normal Roblox avatar. Normal suburban backyard. Except your character is approximately three inches tall.</p>
+    <p>A fallen hot dog is enormous. Grass reaches above your head. A soda can is shelter. A garden hose is a pipeline. A patio table is a skyscraper. A swimming pool is an ocean. A dog is effectively Godzilla.</p>
+    <p>And four players driving a vehicle made from toy wheels and AA batteries through all of it is inherently funny.</p>
+    <div class="tagline">Ordinary object + enormous scale = content.</div>
+
+    <h3>Elevator pitch</h3>
+    <p><strong>3 INCHES TALL is a 1–8 player cooperative adventure where players build junk vehicles, take expeditions into a giant backyard, survive dynamic environmental disasters, collect salvage and strange discoveries, and turn their tiny shed settlement into a thriving miniature town.</strong></p>
+    <p>Target natural session length: roughly <strong>12–25 minutes</strong>, with players free to stay longer.</p>
+
+    <h3>The core loop</h3>
+    <ol>
+      <li><strong>Enter camp.</strong> Workbench, garage, map, trophy wall, contract board, other players, your vehicle.</li>
+      <li><strong>Pick an expedition.</strong> Battery Run, Missing Scout, Garden Research, etc.</li>
+      <li><strong>Travel.</strong> Walk or drive your junk buggy.</li>
+      <li><strong>Something changes.</strong> Sprinkler turns on, ant migration crosses the route, rain starts, dog gets released, debris falls.</li>
+      <li><strong>Make a risk/reward decision.</strong> Extract now or get greedy?</li>
+      <li><strong>Return.</strong> Loot becomes parts, settlement progress, vehicle mods, blueprints and collections.</li>
+      <li><strong>Show it off.</strong> Rare discoveries physically appear in camp.</li>
+      <li><strong>One more run.</strong></li>
+    </ol>
+
+    <h3>The first 10 minutes</h3>
+    <table>
+      <tr><th>Time</th><th>Experience</th></tr>
+      <tr><td>0:00–0:15</td><td>Spawn. Camera sells giant scale. Text: <strong>YOU'RE 3 INCHES TALL.</strong></td></tr>
+      <tr><td>0:15–0:45</td><td>Grab a bottle cap.</td></tr>
+      <tr><td>0:45–1:20</td><td>Attach it to the damaged starter buggy using a highlighted socket.</td></tr>
+      <tr><td>1:20–2:00</td><td>Garage opens. <strong>GO GET THE BATTERY.</strong></td></tr>
+      <tr><td>2:00–5:00</td><td>First loot, first bug, first hazard, first funny failure.</td></tr>
+      <tr><td>5:00–10:00</td><td>Reach meaningful objective and return to permanent progression.</td></tr>
+    </table>
+    <p>No five-minute tutorial. Everything after the first interaction is contextual.</p>
+  </section>
+
+  <section id="map">
+    <h2>Part IV — World map</h2>
+    <p>Initial release should be <strong>one extremely dense backyard</strong>, not five enormous empty worlds. Roughly 900–1,100 studs across subject to actual traversal testing.</p>
+    <pre>
+                         NORTH / BACK FENCE
+┌──────────────────────────────────────────────────────────────┐
+│                                                              │
+│   WOODPILE +             DOG RUN /              FENCE GAP    │
+│   SPIDER HOLLOW          PET ZONE               [FUTURE]     │
+│      █████                 █████                    ↑         │
+│         \                    |                                │
+│          \              OLD OAK TREE                          │
+│           \                ███                                │
+│                                                              │
+│   COMPOST WILDS      GARDEN BEDS         POOL / DRAIN       │
+│      █████          ████████████          ~~~~~~~~~          │
+│         \             /      \               /               │
+│          \           /        \             /                │
+│           \     HOSE CROSSING ─────────────                  │
+│                                                              │
+│   SHED / HOME CAMP        SANDBOX          PATIO             │
+│   █████████████           ::::::          ███████            │
+│   █ GARAGE    █ ────────> :::::: ───────> █ GRILL           │
+│   █ WORKBENCH █                            █ TABLE           │
+│   █ TROPHIES  █                                              │
+│   █████████████                                              │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+                         HOUSE / SOUTH</pre>
+
+    <h3>Zone 1 — Shed Camp</h3>
+    <p>Safe, warm, visually cluttered with trophies. Major stations: garage, workbench, contract board, radio, map, collection book, trophy shelves, tiny garden, wardrobe. Other players' vehicles stay visible to create aspiration.</p>
+
+    <h3>Zone 2 — Patio Plains</h3>
+    <p>Starter zone. Plastic forks, fries, grill, flip-flops, chair legs, soda cans, bottle caps. Enemies: ants, gnats, beetles. Hazards: human footsteps, broom sweep, grill heat.</p>
+
+    <h3>Zone 3 — Garden Beds</h3>
+    <p>Dense vegetation, wire, seeds, plant fibers, pollen and ceramic fragments. Sprinkler cycles transform paths into rivers and create temporary routes.</p>
+
+    <h3>Zone 4 — Sandbox Dunes</h3>
+    <p>Toy parts, buried treasure, ant tunnels. Soft terrain makes wheel selection matter: sand wheels, patio wheels, cheap bottle-cap wheels. Upgrades change decisions instead of just adding +12 damage.</p>
+
+    <h3>Zone 5 — Pool Deck</h3>
+    <p>The ocean biome. Pool noodles become islands, toys become structures, drain creates suction events. Boats are a future expansion, not launch scope.</p>
+
+    <h3>Zone 6 — Compost Wilds</h3>
+    <p>Rare biological materials, strange insects, poison/gas pockets, rotten fruit, huge mushrooms. Higher rewards and higher danger.</p>
+
+    <h3>Zone 7 — Woodpile / Spider Hollow</h3>
+    <p>Launch endgame zone. Vertical traversal, webs, darkness, spiders, rare fibers and nails. Spiders behave like horror predators, not MMORPG health bars.</p>
+
+    <h3>Zone 8 — Dog Run</h3>
+    <p>You hear the collar before seeing the dog. Players hide under objects, distract it, flee by vehicle or escape into pipes. The dog is not a boss to farm; it is <strong>weather with teeth.</strong></p>
+
+    <h3>Expansion roadmap</h3>
+    <ol>
+      <li>Garage interior</li>
+      <li>Front yard</li>
+      <li>Storm drain</li>
+      <li>Inside the house / basement</li>
+      <li>Neighbor's yard</li>
+      <li>Street</li>
+    </ol>
+  </section>
+
+  <section id="events">
+    <h2>Part V — The event system is the content multiplier</h2>
+    <p>Bad live-service design adds Sword #174. Good live-service design adds <strong>rain</strong>, because rain changes driving, visibility, water level, enemy behavior, loot, missions, shortcuts, sound and rare spawns.</p>
+
+    <h3>Minor events</h3>
+    <div class="grid">
+      <div class="card">Sprinkler sweep</div>
+      <div class="card">Bird shadow</div>
+      <div class="card">Wind gust</div>
+      <div class="card">Food drop</div>
+      <div class="card">Trash spill</div>
+      <div class="card">Ant migration</div>
+      <div class="card">Toy robot activation</div>
+      <div class="card">Human footsteps / falling acorns</div>
+    </div>
+
+    <h3>Major events</h3>
+    <div class="card">
+      <h4>LAWNMOWER</h4>
+      <p>Players hear it start. Radio: <strong>MOWER STARTED. GET OFF THE WEST LAWN.</strong> The environment begins disappearing behind it.</p>
+    </div>
+    <div class="card">
+      <h4>DOG RELEASED</h4>
+      <p>An entire zone becomes pursuit territory.</p>
+    </div>
+    <div class="card">
+      <h4>THUNDERSTORM</h4>
+      <p>Waterways form, low ground floods and special resources appear.</p>
+    </div>
+    <div class="card">
+      <h4>LEAF BLOWER</h4>
+      <p>Loose objects become projectiles. Players and vehicles get pushed.</p>
+    </div>
+    <div class="card">
+      <h4>BBQ PARTY</h4>
+      <p>Patio becomes dangerous human territory but rare food/salvage drops everywhere.</p>
+    </div>
+    <div class="card">
+      <h4>POOL OVERFLOW</h4>
+      <p>Temporary waterways create new routes.</p>
+    </div>
+  </section>
+
+  <section id="progression">
+    <h2>Part VI — Progression without simulator cancer</h2>
+    <p>Use multiple meaningful progression tracks rather than a single infinitely inflating currency.</p>
+
+    <div class="grid">
+      <div class="card"><h4>Scrap</h4><p>Common soft currency for ordinary crafting/upgrades. Not directly sold at first.</p></div>
+      <div class="card"><h4>Components</h4><p>Physical loot: battery cells, springs, rubber, wire, bearings, plastic, cloth fiber.</p></div>
+      <div class="card"><h4>Blueprints</h4><p>Knowledge progression. Best items require discovery, not just currency.</p></div>
+      <div class="card"><h4>Scout Rank</h4><p>Account progression unlocking contracts and zones, not endless raw combat multipliers.</p></div>
+      <div class="card"><h4>Vehicle Mastery</h4><p>Using vehicle families unlocks customization and sidegrades.</p></div>
+      <div class="card"><h4>Field Guide</h4><p>Discover bugs, plants, weather, landmarks and strange objects. Huge completionist value.</p></div>
+      <div class="card"><h4>Settlement</h4><p>The camp visibly grows from cardboard shelters into a miniature town.</p></div>
+      <div class="card"><h4>Personal Trophies</h4><p>Rare discoveries become physical props in camp.</p></div>
+    </div>
+
+    <h3>Gear philosophy</h3>
+    <p>No Sword I → Sword II → Sword III treadmill.</p>
+    <ul>
+      <li><strong>Sewing Needle</strong> — fast melee</li>
+      <li><strong>Thumbtack Spear</strong> — reach</li>
+      <li><strong>Rubber Band Launcher</strong> — ranged</li>
+      <li><strong>Matchbox Shield</strong> — defense</li>
+      <li><strong>Magnet</strong> — pulls metal salvage</li>
+      <li><strong>Suction Cup</strong> — traversal</li>
+      <li><strong>Paperclip Grapple</strong> — vertical mobility</li>
+    </ul>
+
+    <h3>Vehicles</h3>
+    <p>Vehicles are one of the strongest identity and monetization layers, but launch uses <strong>socketed construction</strong> instead of full Scrap Mechanic-style freeform building.</p>
+    <ul>
+      <li>Chassis</li>
+      <li>Front wheels</li>
+      <li>Rear wheels</li>
+      <li>Storage</li>
+      <li>Power source</li>
+      <li>Utility</li>
+      <li>Cosmetic accessory</li>
+    </ul>
+    <p>Examples: AA-powered buggy, wind-up toy chassis, skateboard truck, soapbox racer, pull-back vehicle.</p>
+
+    <h3>Death</h3>
+    <p>No “pay 49 Robux or lose 42 minutes” bullshit. Players get downed, friends can revive, full party wipes lose some expedition cargo, but permanent blueprints/discoveries are safe. Recovery bags can create a natural follow-up expedition.</p>
+
+    <h3>PvP and trading</h3>
+    <p><strong>No launch PvP.</strong> It adds balance, cheating, toxicity and mobile/PC fairness problems without improving the core fantasy.</p>
+    <p><strong>No launch trading.</strong> Trading requires dupe protection, provenance, rollback infrastructure, scam prevention and moderation. It can wait.</p>
+  </section>
+
+  <section id="social">
+    <h2>Part VII — Social systems</h2>
+    <p>Social play should change gameplay instead of merely applying a +30% XP buff.</p>
+
+    <h3>Expeditions</h3>
+    <p>Solo viable. Two players noticeably more fun. Four players chaotic. Six-to-eight possible. No mandatory healer/tank/DPS roles.</p>
+
+    <h3>Ping system</h3>
+    <p>Mobile-friendly pings: Danger, Loot, Come Here, Help, Vehicle, Objective.</p>
+
+    <h3>Haul table</h3>
+    <p>At expedition end, recovered items physically dump onto a table. Instead of “+68 scrap,” players get a visual “LOOK AT ALL THE SHIT WE BROUGHT HOME.”</p>
+
+    <h3>Group interaction</h3>
+    <ul>
+      <li>Some heavy objects need multiple people.</li>
+      <li>Different utility gear synergizes.</li>
+      <li>Multi-seat vehicles.</li>
+      <li>Group contracts.</li>
+      <li>Rescue mechanics.</li>
+    </ul>
+  </section>
+
+  <section id="monetization">
+    <h2>Part VIII — Monetization</h2>
+    <div class="tagline">Monetize attachment, not irritation.</div>
+    <p>Good thought: “I love my vehicle/base/character and want it cooler.” Bad thought: “The developer made this miserable so I would pay.”</p>
+
+    <table>
+      <tr><th>Product</th><th>Approx. test range</th><th>Purpose</th></tr>
+      <tr><td>Cosmetic starter bundle</td><td>49–79 R</td><td>Easy first purchase</td></tr>
+      <tr><td>Buggy paint/decal bundle</td><td>79–149 R</td><td>Identity</td></tr>
+      <tr><td>Vehicle horn/effect pack</td><td>49–99 R</td><td>Social/funny expression</td></tr>
+      <tr><td>Outfit bundle</td><td>149–299 R</td><td>Character identity</td></tr>
+      <tr><td>Extra saved loadout</td><td>99–199 R</td><td>Convenience</td></tr>
+      <tr><td>Extra garage preset</td><td>149–249 R</td><td>Convenience</td></tr>
+      <tr><td>Settlement decorator pass</td><td>199–299 R</td><td>Creativity</td></tr>
+      <tr><td>Premium style pass</td><td>399–599 R</td><td>Cosmetics + presets</td></tr>
+      <tr><td>Private server</td><td>~49–99 R</td><td>Friend-group utility</td></tr>
+      <tr><td>Scout Club</td><td>Test later</td><td>Recurring cosmetic value</td></tr>
+    </table>
+
+    <h3>Scout Club</h3>
+    <p>Possible subscription value: exclusive cosmetic set, special paint, nameplate, extra outfit preset, extra trophy layout and monthly cosmetic currency.</p>
+    <p>Not: 2× damage, 2× materials, huge inventory advantages or the best weapon.</p>
+
+    <h3>No paid lootboxes at launch</h3>
+    <p>Direct purchase creates trust. Want the frog backpack? Buy the frog backpack. Done.</p>
+
+    <h3>Revenue scenario examples</h3>
+    <p class="small">Illustrations, not forecasts. Actual performance depends on conversion, ARPPU, product mix, retention and Roblox program eligibility.</p>
+    <table>
+      <tr><th>Example</th><th>Assumption</th><th>Illustrative result</th></tr>
+      <tr><td>10K DAU</td><td>0.75% purchase/day × 120 R</td><td>9,000 R user spend/day; if all own-pass at 70%, 6,300 earned R/day</td></tr>
+      <tr><td>50K DAU</td><td>1.25% × 150 R</td><td>93,750 R user spend/day; 65,625 earned R/day at 70%</td></tr>
+      <tr><td>100K DAU</td><td>1.5% × 175 R</td><td>262,500 R user spend/day; 183,750 earned R/day at 70%</td></tr>
+    </table>
+  </section>
+
+  <section id="playerbase">
+    <h2>Part IX — How big could the player base get?</h2>
+    <p>Build the economics so that <strong>10K CCU already feels successful</strong>. Never require a million CCU for the business model to work.</p>
+    <table>
+      <tr><th>Sustained CCU</th><th>Meaning</th></tr>
+      <tr><td>50–100</td><td>Still proving product</td></tr>
+      <tr><td>100–500</td><td>Validated niche</td></tr>
+      <tr><td>500–2K</td><td>Legitimate game</td></tr>
+      <tr><td>2K–5K</td><td>Strong emerging title</td></tr>
+      <tr><td>5K–20K</td><td>Serious Roblox game</td></tr>
+      <tr><td>20K–50K</td><td>Major hit</td></tr>
+      <tr><td>50K–100K</td><td>Platform-level success</td></tr>
+      <tr><td>100K–500K</td><td>Blockbuster</td></tr>
+      <tr><td>500K+</td><td>Exceptional</td></tr>
+      <tr><td>1M+</td><td>Statistical freak territory</td></tr>
+      <tr><td>10M+</td><td>Never put this in the business plan</td></tr>
+    </table>
+    <p>The concept is broad enough that 100K+ is conceivable, but the plan must not assume it.</p>
+  </section>
+
+  <section id="discovery">
+    <h2>Part X — Discovery strategy</h2>
+    <h3>Title</h3>
+    <p><strong>3 INCHES TALL [SURVIVAL]</strong></p>
+    <h3>Description</h3>
+    <div class="quote">You’re three inches tall. Build a junk buggy, explore a gigantic backyard with friends, survive spiders, sprinklers, lawnmowers and storms, and bring your loot home before things get worse.</div>
+
+    <h3>Thumbnail campaign</h3>
+    <ul>
+      <li><strong>A:</strong> Four tiny Roblox avatars in a buggy with a gigantic lawnmower wheel behind them.</li>
+      <li><strong>B:</strong> Player shining a flashlight while spider legs surround a soda-can shelter.</li>
+      <li><strong>C:</strong> Sprinkler firing like a tsunami while a buggy jumps a drainage ditch.</li>
+      <li><strong>D:</strong> Dog nose filling half the frame while tiny characters hide under a chair.</li>
+      <li><strong>E:</strong> Beautiful upgraded miniature settlement inside the shed.</li>
+    </ul>
+
+    <h3>Icon</h3>
+    <p>Tiny avatar on a bottle cap next to a giant sneaker or grass blade. The size disparity must read at phone-icon scale.</p>
+
+    <h3>Launch stages</h3>
+    <h4>Phase 0 — Kill the idea with pictures</h4>
+    <p>Create fake thumbnails and 10–20 seconds of representative footage. Ask target players what they think they do in the game. If they cannot explain “tiny backyard survival/exploration,” packaging failed.</p>
+
+    <h4>Phase 1 — Ugly prototype</h4>
+    <p>One hub, Patio, Garden, one buggy, one enemy, one sprinkler event, one expedition, one upgrade. No monetization. No polish.</p>
+    <p>Question: is leaving camp → finding stuff → environmental chaos → bringing it home actually fun?</p>
+
+    <h4>Phase 2 — Closed alpha</h4>
+    <p>Track spawn → objective → leave camp → first loot → first danger → objective reached → extraction → first upgrade → second expedition.</p>
+
+    <h4>Phase 3 — Beta</h4>
+    <p>Get enough real traffic to compare retention, engagement, monetization and benchmark performance. Do not make up universal D1 targets; compare against relevant Roblox cohorts.</p>
+
+    <h3>Kill matrix</h3>
+    <table>
+      <tr><th>Observed problem</th><th>Likely diagnosis</th><th>Action</th></tr>
+      <tr><td>CTR/play-through bad, retention good</td><td>Game good, packaging bad</td><td>Change thumbnail, icon, title, description</td></tr>
+      <tr><td>Play-through good, immediate bounce awful</td><td>Marketing promise/onboarding mismatch</td><td>Fix first minutes</td></tr>
+      <tr><td>D1 strong, D7 poor</td><td>First session fun, long-term goals weak</td><td>Add collection, progression, social variety</td></tr>
+      <tr><td>Retention strong, monetization weak</td><td>Great problem</td><td>Improve offers without damaging game</td></tr>
+      <tr><td>Monetization strong, retention weak</td><td>Possible over-extraction</td><td>Reduce pressure; fix product</td></tr>
+      <tr><td>Everything weak</td><td>No product-market fit</td><td>Kill/pivot</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Part XI — LiveOps</h2>
+    <p>The content cadence must match team capacity. Never promise “new world every Friday.”</p>
+    <ul>
+      <li><strong>Weekly-ish:</strong> bug fixes, QoL, small contract, one cosmetic, balance.</li>
+      <li><strong>Every 2–3 weeks:</strong> one meaningful reusable module: bug, vehicle component family, event or contract chain.</li>
+      <li><strong>Every 6–8 weeks:</strong> major permanent addition: sub-zone, settlement feature, weather system, vehicle category.</li>
+    </ul>
+
+    <h3>Seasonal events</h3>
+    <ul>
+      <li><strong>Halloween:</strong> giant carved pumpkin dungeon, candy drops, fog, special insects.</li>
+      <li><strong>Christmas:</strong> snow changes traversal, toy packaging creates salvage, holiday lights become ziplines.</li>
+      <li><strong>Summer:</strong> pool content, BBQ, heat, fireworks debris.</li>
+    </ul>
+  </section>
+
+  <section id="tech">
+    <h2>Part XII — Technology architecture</h2>
+
+    <h3>Server authority</h3>
+    <p>Server validates currency, loot generation, inventory changes, damage, upgrade costs, purchase entitlements and mission rewards. Client says “I attempted to pick this up,” never “give me 9,999 batteries.”</p>
+
+    <h3>Save structure</h3>
+    <pre>PlayerProfile
+ ├─ SchemaVersion
+ ├─ Currencies
+ ├─ Progression
+ │   ├─ ScoutRank
+ │   ├─ XP
+ │   └─ ZoneUnlocks
+ ├─ Inventory
+ ├─ Blueprints
+ ├─ FieldGuide
+ ├─ VehicleParts
+ ├─ VehiclePresets
+ ├─ Cosmetics
+ ├─ Settlement
+ ├─ Statistics
+ └─ PurchaseEntitlements</pre>
+    <p>Every schema change needs explicit migrations.</p>
+
+    <h3>Purchase handling</h3>
+    <p>Receipt handling must be idempotent. Server crashes must neither lose a purchase nor grant it repeatedly.</p>
+
+    <h3>Exploit monitoring</h3>
+    <p>Track impossible pickup rates, impossible currency jumps, teleport velocity, items appearing without provenance, physically impossible contract times and excessive remote calls. Flag anomalies with confidence rather than auto-banning every weird event.</p>
+
+    <h3>Physics</h3>
+    <p>Not every grass blade has physics. Not every scrap object simulates forever. Use socketed vehicle systems, pooled debris, LOD, streaming, collision groups and strict active-NPC budgets. Dynamic clutter should often look physical without being hundreds of networked rigid bodies.</p>
+
+    <h3>Mobile first</h3>
+    <p>Core input budget: movement, camera, attack/use, dodge, interact and two equipment slots. No fourteen-hotkey UI.</p>
+
+    <h3>Aspect-ratio audit</h3>
+    <ul>
+      <li>16:9 PC/console</li>
+      <li>19.5:9 modern phones</li>
+      <li>20:9 phones</li>
+      <li>4:3 tablets</li>
+      <li>21:9 ultrawide</li>
+    </ul>
+    <p>Use anchors/scale rather than hardcoded pixels. Critical HUD stays in safe zones, store UI never blocks mobile movement controls, and controller navigation must work fully on console.</p>
+
+    <h3>Accessibility</h3>
+    <ul>
+      <li>Color is never the only rarity signal.</li>
+      <li>Hazards pair color with shape/audio.</li>
+      <li>Camera shake slider.</li>
+      <li>Reduced motion.</li>
+      <li>Separate music/SFX controls.</li>
+      <li>Sensitivity sliders.</li>
+      <li>Toggle/hold sprint options.</li>
+      <li>Potential arachnophobia mode.</li>
+    </ul>
+  </section>
+
+  <section id="production">
+    <h2>Part XIII — Production scope</h2>
+    <p>Ideal small professional core team:</p>
+    <ul>
+      <li>1 gameplay/lead engineer</li>
+      <li>1 systems/backend engineer</li>
+      <li>1 environment/3D artist</li>
+      <li>1 prop/vehicle/character artist</li>
+      <li>1 animator/VFX generalist</li>
+      <li>1 UI/UX + 2D person</li>
+      <li>Fractional sound/music, QA, key art, community/marketing</li>
+    </ul>
+    <p>Roughly 5–7 strong core people can make a serious version. A solo developer can prototype it, but should not attempt the full vision at once.</p>
+
+    <h3>Version 1.0 must ship</h3>
+    <ul>
+      <li>Shed Camp</li>
+      <li>Patio</li>
+      <li>Garden</li>
+      <li>Sandbox</li>
+      <li>Partial Woodpile</li>
+      <li>One buggy family</li>
+      <li>15–25 vehicle components</li>
+      <li>~10 meaningful tools/gadgets</li>
+      <li>4–6 ordinary enemies</li>
+      <li>1 predator</li>
+      <li>6–8 dynamic events</li>
+      <li>~20 contracts using reusable structures</li>
+      <li>Field Guide</li>
+      <li>Settlement progression</li>
+      <li>Basic trophies</li>
+      <li>Cosmetics</li>
+      <li>Party/co-play</li>
+      <li>Analytics</li>
+      <li>Monetization basics</li>
+    </ul>
+
+    <h3>Version 1.0 explicitly does not ship</h3>
+    <p>House interior, pool boats, street, neighbor yard, PvP, trading, freeform construction, pets, guild warfare, procedural worlds, 40 vehicles, 70 weapons, fishing, farming, cooking skill trees, marriage systems or cryptocurrency.</p>
+  </section>
+
+  <section id="debate">
+    <h2>Part XIV — Self-debate: trying to kill the winner</h2>
+
+    <div class="card">
+      <h3>Attack #1: “This is literally Grounded.”</h3>
+      <p><strong>Attack:</strong> Tiny humans, backyard, bugs, crafting.</p>
+      <p><strong>Defense:</strong> If it becomes traditional survival, yes. The identity must be junk vehicles + expeditions + salvage + dynamic disasters + persistent settlement, with light crafting and fast runs.</p>
+      <p><strong>Verdict:</strong> Real risk, manageable through design and art direction.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #2: “Too complicated for Roblox kids.”</h3>
+      <p>The first interaction is pick thing up → attach thing → drive. Deeper optimization appears later. Low floor, high ceiling.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #3: “This will run like shit on phones.”</h3>
+      <p>Probably the biggest technical threat. Giant grass, bugs, vehicles, rain and physics are expensive. This is why freeform construction dies at launch and weak Android testing starts in prototype.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #4: “Players will see every zone and leave.”</h3>
+      <p>Correct if the map is a museum. Dynamic events, collections, settlement progression, contracts and vehicle experimentation must turn the world into a system.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #5: “Vehicles aren't actually fun.”</h3>
+      <p>Then kill or redesign them in week one. No emotional attachment. If the buggy sucks, fix movement before building art.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #6: “Too many progression systems.”</h3>
+      <p>Don't surface them all immediately. First session: scrap. Later: blueprints, Field Guide, settlement mastery.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #7: “How do you monetize survival without ruining it?”</h3>
+      <p>Character, vehicle and base identity create visible surfaces for cosmetics. No need to monetize damage.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #8: “Solo players get screwed.”</h3>
+      <p>Mandatory objectives stay solo-completable. Group play creates chaos and optional coordination, not hard locks.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #9: “Updates will be too expensive.”</h3>
+      <p>Everyday household objects are cheaper content than handcrafted fantasy civilizations. One object can be prop, resource, objective, vehicle component, trophy and event object.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #10: “Copycats will clone it.”</h3>
+      <p>They will. The moat is not secrecy; it is production speed, systems depth, community, data and polish.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #11: “What if Roblox stops recommending us?”</h3>
+      <p>Use Home, Search, social creators/clips and returning-player community systems. Never depend on a single spike.</p>
+    </div>
+
+    <div class="card">
+      <h3>Attack #12: “Maybe it simply isn't fun.”</h3>
+      <p>This is the most important objection, and no document can answer it.</p>
+      <div class="quote">Can four people driving a shitty bottle-cap buggy through a gigantic garden while a sprinkler tries to kill them make them laugh?</div>
+      <p>If yes, we may have something. If no, kill it.</p>
+    </div>
+
+    <h3>Risk table</h3>
+    <table>
+      <tr><th>Risk</th><th>Probability</th><th>Damage</th><th>Earliest detection</th><th>Response</th></tr>
+      <tr><td>Vehicle movement sucks</td><td>Medium</td><td>Extreme</td><td>Week 1 prototype</td><td>Redesign immediately</td></tr>
+      <tr><td>Mobile performance</td><td>High</td><td>Extreme</td><td>Device test</td><td>Reduce physics/art complexity</td></tr>
+      <tr><td>Grounded-copy perception</td><td>Medium</td><td>High</td><td>Thumbnail/user tests</td><td>Strengthen junk-tech identity</td></tr>
+      <tr><td>First session confusing</td><td>Medium</td><td>Extreme</td><td>Funnel analytics</td><td>Remove systems/tutorial friction</td></tr>
+      <tr><td>Long-term repetition</td><td>High</td><td>High</td><td>D7/D28</td><td>Events/collections/meta</td></tr>
+      <tr><td>Update pipeline too slow</td><td>Medium</td><td>High</td><td>Production tracking</td><td>Modular content</td></tr>
+      <tr><td>Monetization weak</td><td>Medium</td><td>Medium</td><td>Payer analytics</td><td>Better cosmetic offers</td></tr>
+      <tr><td>Monetization hated</td><td>Medium</td><td>High</td><td>Ratings/retention</td><td>Remove pressure products</td></tr>
+      <tr><td>Exploits</td><td>High eventually</td><td>High</td><td>Telemetry</td><td>Server authority</td></tr>
+      <tr><td>Copycat</td><td>High after success</td><td>Medium</td><td>Market</td><td>Ship faster/deeper</td></tr>
+      <tr><td>Poor thumbnails</td><td>Medium</td><td>High</td><td>Play-through</td><td>Creative A/B tests</td></tr>
+      <tr><td>Ads create fake spike</td><td>High if misused</td><td>High</td><td>Source cohorts</td><td>Do not scale until organic metrics work</td></tr>
+    </table>
+  </section>
+
+  <section id="roadmap">
+    <h2>Part XV — Development roadmap</h2>
+    <table>
+      <tr><th>Weeks</th><th>Goal</th></tr>
+      <tr><td>1–2</td><td><strong>Prove fantasy:</strong> graybox backyard, character scale, buggy, sprinkler, one creature, one objective.</td></tr>
+      <tr><td>3–5</td><td><strong>Prove loop:</strong> camp, loot, inventory, extraction, one permanent upgrade, second expedition, analytics.</td></tr>
+      <tr><td>6–8</td><td><strong>Prove social:</strong> four-player sessions, revive, pings, multi-seat buggy, haul table, dynamic event.</td></tr>
+      <tr><td>9–12</td><td><strong>Vertical slice:</strong> Patio, Garden, Sandbox, real art direction, polished UI, audio/VFX, vehicle customization, Field Guide.</td></tr>
+      <tr><td>13–16</td><td><strong>Progression:</strong> contracts, settlement, blueprints, trophies, monetization skeleton, saves, anti-exploit.</td></tr>
+      <tr><td>17–20</td><td><strong>Beta/polish:</strong> device QA, funnels, economy balance, new-player testing, thumbnail tests, retention iteration.</td></tr>
+    </table>
+    <p>For a solo/small inexperienced team, duration can be much longer. Cut content before cutting testing.</p>
+
+    <h3>The analytics dashboard</h3>
+    <p>Watch Home play-through, &lt;60s bounce, 61–180s bounce, first-session survival, average session, D1, D7, D30, play days/user, co-play, contract funnel, first upgrade, second expedition, payer conversion, ARPPU, store conversion, revenue by product, device retention and acquisition-source retention.</p>
+
+    <h3>Single most important custom metric</h3>
+    <div class="card">
+      <h4>Second Expedition Rate</h4>
+      <p>Percentage of first-time players who begin another expedition after completing or failing the first.</p>
+      <p>If 100 people finish the first mission and 8 start another, the game is fucked. If 65 immediately turn around and go back outside, pay attention.</p>
+    </div>
+
+    <h3>Second-most important custom metric</h3>
+    <div class="card">
+      <h4>Show-Off Interaction Rate</h4>
+      <p>How many returning players interact with garage customization, trophy rooms, settlement cosmetics and other players' vehicles. Identity is what turns months into years.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Final design commandments</h2>
+    <ol>
+      <li>Fun before content.</li>
+      <li>The player leaves camp within one minute.</li>
+      <li>Nothing exists solely to stretch playtime.</li>
+      <li>Every update should interact with multiple systems.</li>
+      <li>Players buy things because they care, not because they're annoyed.</li>
+      <li>The world should create stories players didn't expect.</li>
+      <li>Mobile performance is a design constraint, not cleanup.</li>
+      <li>Don't add another currency unless necessary.</li>
+      <li>Don't add trading before the economy is bulletproof.</li>
+      <li>Don't scale advertising until retention deserves traffic.</li>
+      <li>Never mistake CCU spikes for product-market fit.</li>
+      <li>If players aren't voluntarily doing a second run, stop adding content and repair the loop.</li>
+    </ol>
+  </section>
+
+  <section id="verdict" class="verdict">
+    <h2 style="border-top:0;margin-top:0">Final verdict</h2>
+    <p>The strongest Roblox opportunity here is not another meme simulator and not a hyper-serious pseudo-AAA project that forgets why Roblox spreads. It is a game with a <strong>ridiculously obvious Roblox-style fantasy on the surface and a legitimately deep game underneath.</strong></p>
+    <p><strong>3 INCHES TALL</strong> does that unusually well.</p>
+    <ul>
+      <li>A child sees: “LOL I'M TINY AND THAT'S A HUGE DOG.”</li>
+      <li>A teenager sees: “We can upgrade this dumbass buggy and raid Spider Hollow.”</li>
+      <li>An older player sees: “There's an actual extraction/progression/build strategy here.”</li>
+      <li>A YouTuber sees: lawnmower chase footage.</li>
+      <li>A TikToker sees: 12-second disaster clips.</li>
+      <li>A collector sees: Field Guide.</li>
+      <li>A completionist sees: blueprints.</li>
+      <li>A roleplayer sees: settlement.</li>
+      <li>A spender sees: vehicle/base/character customization.</li>
+      <li>A friend group sees: co-op chaos.</li>
+      <li>The developer sees: a backyard that can continuously generate content without needing another anime IP every month.</li>
+    </ul>
+    <p>Shopkeeper Street slightly beat it on raw theoretical scoring, but 3 Inches Tall was the one I'd actually put development time behind because it combined a high ceiling with much more survivable execution risk.</p>
+    <div class="tagline">Do not design for the screenshot where the game has 2 million CCU. Design for the screenshot two years later where it still has 40,000.</div>
+  </section>
+
+  <footer class="small" style="margin-top:32px;border-top:1px solid var(--line);padding-top:18px">
+    Sol / GPT-5.6 — original Roblox game concept and launch plan, HTML edition.
+  </footer>
+</div>
+</body>
+</html>
